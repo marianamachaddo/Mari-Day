@@ -1,0 +1,290 @@
+/* Configurações Globais e Tema Escuro */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+}
+
+/* Estilo do Carrossel */
+.carousel-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative; 
+}
+
+.carousel-slide {
+    display: flex;
+    height: 100%;
+    width: 900%;
+    transition: transform 0.7s ease-in-out;
+}
+
+.carousel-slide img {
+    width: calc(100% / 9);
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo do Conteúdo (Nomes e Texto) */
+.content {
+    text-align: center;
+    /* Reduzido para dar espaço ao botão */
+    margin-bottom: 1rem;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content .name {
+    font-family: 'Playfair Display', serif;
+    color: #e74c3c;
+}
+
+.content .ampersand {
+    font-family: 'Playfair Display', serif;
+    color: #e74c3c;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0 0.2em;
+}
+
+/* Estilos para o texto em formato de carta */
+.letter {
+    text-align: left;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.letter .salutation {
+    font-style: italic;
+}
+
+.letter .highlight {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.letter .closing {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.letter .signature {
+    font-style: italic;
+    text-align: right;
+    margin-top: 1em;
+}
+
+/* Estilo da Seção do Contador */
+.timer-section {
+    margin-top: 3rem;
+}
+
+.timer-section h2 {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.timer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.time-unit {
+    background-color: #1f1f1f;
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.time-unit span {
+    display: block;
+}
+
+.time-unit span:first-child {
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.time-unit .label {
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    color: #aaaaaa;
+    margin-top: 0.5rem;
+}
+
+.since-date {
+    text-align: center;
+    margin-top: 2rem;
+    color: #aaaaaa;
+    font-weight: 300;
+}
+
+/* Estilos para os Indicadores do Carrossel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(231, 76, 60, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator-dot.active {
+    background-color: #e74c3c;
+}
+
+
+/* ========================================================= */
+/* --- ESTILOS ADICIONADOS (Página Especial e Botão) --- */
+/* ========================================================= */
+
+.special-night-section {
+    background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('roda-gigante.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.special-night-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin: 0;
+}
+
+.special-night-content .subtitle {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.special-night-content .toast {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    border-bottom: 1px solid #e74c3c;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 2rem;
+}
+
+.menu-category {
+    margin-bottom: 2rem;
+}
+
+.menu-category h4 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+}
+
+.menu-category p {
+    margin: 5px 0;
+    color: #b3b3b3;
+    font-weight: 300;
+}
+
+.photo-placeholder {
+    margin-top: 3rem;
+    border: 2px dashed #535353;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.photo-placeholder p {
+    color: #b3b3b3;
+    margin: 0;
+}
+
+/* Estilo do Botão na Página Inicial */
+.special-event-link {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.cta-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Estilo do Link de Voltar */
+.back-link-container {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.back-link {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    color: #ffffff;
+}
